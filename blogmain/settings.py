@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blogmain',
+    'blogs'
 ]
 
 MIDDLEWARE = [
@@ -109,8 +109,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
+ 
+TIME_ZONE = 'Asia/Kolkata'  #set timezone to India
 
 USE_I18N = True
 
@@ -123,6 +123,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT= BASE_DIR / 'staticfiles'  # collectstatic command run pannumpothu static files ivlo folder la save aagum
 STATICFILES_DIRS = [BASE_DIR / "static"] #static files ivlo irukkumnu sollanum
+
+# Media files (Uploaded by users)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'  #media files ivlo save aagumnu sollanum
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
