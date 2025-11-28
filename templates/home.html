@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap Blog Example</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="{% static "css/blog.css"%}" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<header class="blog-header py-3 mb-3 border-bottom">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+    <a class="blog-header-logo text-dark text-decoration-none fw-bold fs-3" href="#">Blog</a>
+    <div>
+      <a class="btn btn-outline-primary me-2" href="#">Login</a>
+      <a class="btn btn-primary" href="#">Register</a>
+    </div>
+  </div>
+</header>
+
+<!-- Category Navigation -->
+<div class="container mb-4">
+  <nav class="nav justify-content-center border-bottom pb-2">
+    <a class="p-2 text-muted" href="#">World</a>
+    <a class="p-2 text-muted" href="#">U.S</a>
+    <a class="p-2 text-muted" href="#">Technology</a>
+    <a class="p-2 text-muted" href="#">Design</a>
+    <a class="p-2 text-muted" href="#">Culture</a>
+    <a class="p-2 text-muted" href="#">Business</a>
+  </nav>
+</div>
+
+<!-- Hero Banner -->
+<div class="hero-banner">
+  <div class="container">
+    <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+    <p class="lead my-3">
+      Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.
+    </p>
+    <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p>
+  </div>
+</div>
+
+<!-- Featured Posts Cards -->
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <img src="images/cricket.jpg" class="card-img-top" alt="Post Image">
+        <div class="card-body">
+          <h3 class="card-title">Featured Post Title 1</h3>
+          <div class="text-muted mb-2">Nov 28</div>
+          <p class="card-text">Short description of the featured post.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card">
+        <img src="images/cricket.jpg" class="card-img-top" alt="Post Image">
+        <div class="card-body">
+          <h3 class="card-title">Featured Post Title 2</h3>
+          <div class="text-muted mb-2">Nov 27</div>
+          <p class="card-text">Another short description of this post.</p>
+          <a href="#" class="stretched-link">Continue reading</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content + Sidebar -->
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-md-8">
+
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">Recent Articles</h3>
+
+      <!-- Blog Post 1 -->
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="card-title">Sample Blog Post</h2>
+          <p class="text-muted mb-2">Nov 28 | John Doe</p>
+          <p class="card-text">This blog post shows a few different types of content...</p>
+          <a href="#" class="btn btn-primary btn-sm">Continue reading →</a>
+        </div>
+      </div>
+
+      <!-- Comments Section -->
+      <div class="card comment-card">
+        <div class="card-body">
+          <h5 class="card-title">Comments (3)</h5>
+
+          <div class="mb-3">
+            <p class="mb-1"><strong>Alice</strong>: Great post! Really informative.</p>
+            <small class="text-muted">2 hours ago</small>
+          </div>
+          <div class="mb-3">
+            <p class="mb-1"><strong>Bob</strong>: I learned a lot, thanks!</p>
+            <small class="text-muted">5 hours ago</small>
+          </div>
+          <div class="mb-3">
+            <p class="mb-1"><strong>Charlie</strong>: Awesome content!</p>
+            <small class="text-muted">1 day ago</small>
+          </div>
+
+          <form>
+            <div class="mb-2">
+              <textarea class="form-control" placeholder="Write your comment"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Blog Post 2 -->
+      <div class="card mt-4">
+        <div class="card-body">
+          <h2 class="card-title">Another Blog Post</h2>
+          <p class="text-muted mb-2">Nov 27 | Jane Doe</p>
+          <p class="card-text">More content goes here...</p>
+          <a href="#" class="btn btn-primary btn-sm">Continue reading →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="col-md-4">
+      <div class="card sidebar-card p-4 bg-light">
+        <h4>About</h4>
+        <p>Short description about the blog or author.</p>
+      </div>
+
+      <div class="card sidebar-card p-4 bg-light">
+        <h4>Follow Us</h4>
+        <ol class="list-unstyled mb-0">
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ol>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="blog-footer py-4 text-center mt-5 border-top">
+  <div class="container">
+    <p>Built with ❤️ using Bootstrap</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
